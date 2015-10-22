@@ -8,7 +8,7 @@ $cliente->setId(1)
         ->setNome("Rafael Ribeiro")
         ->setEmail("rafael@fael.com");
 
-$cliente->inserir();
+//$cliente->inserir();
 foreach ($cliente->listar() as $c){
     echo $c['nome'].'<br>';
 }
