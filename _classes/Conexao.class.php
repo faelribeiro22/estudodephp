@@ -20,11 +20,13 @@
             try {
                 $this->dsn = 'mysql:dbname='.$this->dbname.';host='.$this->dbhost.';port='.$this->dbport;
                 $this->dbh = new PDO($this->dsn, $this->dbuser, $this->dbpass);
-                echo $this->dsn .'<br>'.$this->dbpass;
             } catch (Exception $ex) {
                 echo 'Erro ao conectar ao banco <br>'.$ex->getMessage();
             }
         }
         
+        public function getDbh(){
+            return $this->dbh;
+        }
         
     }

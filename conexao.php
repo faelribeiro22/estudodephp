@@ -3,7 +3,7 @@ include_once '_classes/Cliente.class.php';
 include_once '_classes/Conexao.class.php';
 
 $bd = new Conexao();
-$cliente = new Cliente($bd);
+$cliente = new Cliente($bd->getDbh());
 $cliente->setId(1)
         ->setNome("Rafael Ribeiro")
         ->setEmail("rafael@fael.com");
