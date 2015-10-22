@@ -18,7 +18,6 @@
             $this->dbname = getenv('OPENSHIFT_GEAR_NAME');
             
             $this->dsn = 'mysql:dbname='.$this->dbname.';host='.$this->dbhost.';port='.$this->dbport;
-            echo $this->dsn .'<br>'.$this->dbpass;
             try {
                 $this->dbh = new PDO($this->dsn, $this->dbuser, $this->dbpass);
             } catch (Exception $ex) {
