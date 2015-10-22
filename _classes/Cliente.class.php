@@ -11,6 +11,7 @@ class Cliente
 
     public function __construct($db) {
         $this->db = $db;
+        echo $this->db;
     }
 
     public function listar(){
