@@ -17,7 +17,7 @@
             $this->dbpass = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
             $this->dbname = getenv('OPENSHIFT_GEAR_NAME');
             
-            //echo $this->dsn .'<br>'.$this->dbpass;
+            echo $this->dsn .'<br>'.$this->dbpass;
             try {
                 $this->dsn = 'mysql:dbname='.$this->dbname.';host='.$this->dbhost.';port='.$this->dbport;
                 $this->dbh = new PDO($this->dsn, $this->dbuser, $this->dbpass);
